@@ -1,14 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-// <TouchableOpacity onPress={() => { navigation.navigate("Student") }}>
-// <Text style={styles.button}>Student</Text>
-// </TouchableOpacity>
+
 
 export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => { navigation.navigate("Teacher") }}>
         <Text style={styles.button}>Teacher</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => { navigation.navigate("Student") }}>
+      <Text style={styles.button}>Student</Text>
       </TouchableOpacity>
     </View>
   );

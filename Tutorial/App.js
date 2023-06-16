@@ -3,10 +3,10 @@ import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, Image } fr
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Teacher from "./Components/Teacher"
-// import Student from "./Components/Student"
+import Student from "./Components/Student"
 import HomeScreen from "./Components/HomeScreen"
 import Camera from "./Components/Camera"
-// <Stack.Screen name="Student" component = {Student}/>
+
 
 const Stack = createStackNavigator();
 
@@ -16,7 +16,7 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name="Home" component = {HomeScreen}/>
           <Stack.Screen name="Teacher" component = {Teacher}/>
-          
+          <Stack.Screen name="Student" component = {Student}/>
           <Stack.Screen name="Camera" component = {Camera}/>
         </Stack.Navigator>
     </NavigationContainer>
