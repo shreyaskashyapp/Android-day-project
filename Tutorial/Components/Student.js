@@ -41,7 +41,10 @@ export default function Student({ navigation }) {
         </Picker>
       </View>
 
-      <Doughnut name={name} subject={subject}/>
+      <View style={styles.doughnutContainer}>
+        <Doughnut name={name} subject={subject}/>
+      </View>
+
       <TouchableOpacity onPress={() => { navigation.navigate("Home") }}>
       </TouchableOpacity>
     </View>
@@ -56,15 +59,23 @@ const styles = StyleSheet.create({
   pickerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 10,
-    borderColor: "red",
+    marginBottom: 5,
+    marginRight:10,
+    borderColor: "grey",
     borderWidth: 1,
     paddingHorizontal: 10,
     width: 200, // Set a specific width for the container
+    height:40,
     justifyContent: 'space-between', // Align items along the horizontal axis
   },
   picker: {
     flex: 1, // Allow the picker to take up remaining space
     height: 50,
+  },
+  doughnutContainer: {
+    marginTop: 100,
+    marginRight:80,
+    alignItems: 'center', // Center align items horizontally
+    justifyContent: 'center', // Center align items vertically
   },
 });
